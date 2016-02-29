@@ -64,3 +64,30 @@ This is my attempt to make an apiary server.
                 "Pixar"
             ]
             }
+
+
+
+## Simple requests [/signUp]
+
+### Get a response from the server [POST]
+
++ Request (application/json)
+
+        {
+            "emailAddress": "@gmail.com"
+            "password": "12345678"
+            "accessCode": "abc123"
+            "scheme": "ulCampus"
+        }
+
++ Response 200 (application/json)
+
+        [
+            {
+                "userId": "123456",
+                "emailAddress": "@gmail.com"
+                "password": "12345678"
+                "accessCode": "abc123"
+                "scheme": "ulCampus"
+            }
+        ]
