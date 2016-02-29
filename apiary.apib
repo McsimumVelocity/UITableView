@@ -1,0 +1,66 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# test
+
+This is my attempt to make an apiary server.
+
+## Simple requests [/sayHello]
+
+### Get a response from the server [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "answer": "Hi! This worked!",
+                "spelling": [
+                    {
+                        0: "H"
+                    }, {
+                        1: "E"
+                    }, {
+                        2: "L"
+                    }, {
+                        3: "L"
+                    }, {
+                        4: "0"
+                    }
+                ]
+            }
+        ]
+
+### Send something up to the server [POST]
+
++ Request (application/json)
+
+        {
+            "username": "MikeMc",
+            "emailAddress": "@gmail.com"
+            "interests": [
+                "Apple",
+                "Nintendo",
+                "Tim Cook",
+                "Pixar"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /user/2
+
+    + Body
+
+            {
+            "userId": "0123456",
+            "username": "MikeMc",
+            "emailAddress": "mike@tapadoo.com",
+            "interests": [
+                "Apple",
+                "Nintendo",
+                "Tim Cook",
+                "Pixar"
+            ]
+            }
